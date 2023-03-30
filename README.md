@@ -10,18 +10,36 @@ Features
 
 ## Setup
 
-Install ffmpeg
+### Bot setup in discord dev dashboard
+
+scopes
+* bot
+* applications:commands
+
+permissions
+* Read Messages/View channels
+* Send Messages
+* Read Message History
+* Connect
+* Speak
+* Use Voice Activity
+
+Enable Message Content Intent
+
+
+
+### Install ffmpeg
 ```bash
 sudo apt update
 sudo apt install ffmpeg
 ```
 
-Install required packages:
+### Install required packages:
 ```bash
 pip install py-cord spotipy yt-dlp
 ```
 
-#### Create a .env file in the project directory and add the following:
+### Create a .env file in the project directory and add the following:
 
 ```plaintext
 DISCORD_BOT_TOKEN=<your_discord_bot_token>
@@ -31,13 +49,13 @@ SPOTIFY_CLIENT_SECRET=<your_spotify_client_secret>
 
 Replace `<your_discord_bot_token>`, `<your_spotify_client_id>`, and `<your_spotify_client_secret>` with your actual tokens and credentials.
 
-Run the bot:
+### Run the bot:
 
 ```bash
 python main.py
 ```
 
-#### Usage
+### Usage
 Invite the bot to your server and use the following slash commands:
 
 
