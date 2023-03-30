@@ -3,7 +3,7 @@
 This is a simple Discord music bot that can play music from YouTube and attempt to find a youtube video based on a spotify link. It uses the pycord library, yt-dlp, and Spotipy.
 Features
 
-* Play music from YouTube and Spotify
+* Play music from YouTube
 * Play next song automatically when the current song ends
 * Skip songs
 * Stop playback and clear the queue
