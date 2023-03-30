@@ -1,3 +1,8 @@
+
+
+
+<img src="https://user-images.githubusercontent.com/4047727/228951122-3d527ce8-e175-4f25-895e-fdd2ecb3de84.png" alt="drawing" width="200" />
+
 # Mozart
 
 This is a simple Discord music bot that can play music from YouTube and attempt to find a youtube video based on a spotify link. It uses the pycord library, yt-dlp, and Spotipy.
