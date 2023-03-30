@@ -5,7 +5,6 @@ import asyncio
 import os
 from dotenv import load_dotenv
 from collections import deque
-import logging
 
 import spotipy
 from spotipy.oauth2 import SpotifyClientCredentials
@@ -44,9 +43,6 @@ FFMPEG_OPTIONS = {
     'before_options': '-reconnect 1 -reconnect_streamed 1 -reconnect_delay_max 5',
     'options': '-vn',
 }
-
-logging.basicConfig(level=logging.INFO,
-                    format='%(asctime)s - %(levelname)s - %(message)s')
 
 
 def search_spotify_and_get_youtube_url(query):
@@ -116,7 +112,6 @@ async def play_next(ctx):
     with yt_dlp.YoutubeDL(YDL_OPTS) as ydl:
         info = ydl.extract_info(url, download=False)
         title = info['title']
-        logging.info('%s', title)
         await ctx.respond(f'Now playing: {title}')
         await bot.change_presence(status=discord.Status.online, activity=discord.Activity(type=discord.ActivityType.listening, name=title))
 
@@ -169,7 +164,6 @@ async def skip(ctx):
             await ctx.respond(f"There's nothing to skip. Try /stop if you want to stop the stream")
     else:
         await ctx.respond(f'Nothing to skip')
-
 
 
 @bot.slash_command(name="stop", description="Stop playback and clear the queue")
